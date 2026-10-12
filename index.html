@@ -3,25 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Agrivaan Mobile Applications</title>
-    <meta name="description" content="Comprehensive Privacy Policy for Agrivaan Farmer App and Agrivaan Owner App developed by Crafzio. Fully compliant with Google Play Store Policies.">
+    <title>Agrivaan - Privacy Policy & Terms of Service</title>
+    <meta name="description" content="Official Privacy Policy, Terms & Conditions, and User Data Deletion Instructions for Agrivaan Farmer App and Agrivaan Owner App developed by Crafzio. Fully compliant with Google Play Store Policies.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #2e7d32;
-            --primary-dark: #1b5e20;
-            --primary-light: #e8f5e9;
-            --accent: #4caf50;
-            --text-main: #1e293b;
+            --primary: #15803d;
+            --primary-dark: #14532d;
+            --primary-light: #f0fdf4;
+            --primary-border: #bbf7d0;
+            --accent: #22c55e;
+            --text-heading: #0f172a;
+            --text-main: #334155;
             --text-muted: #64748b;
             --bg-body: #f8fafc;
             --bg-card: #ffffff;
             --border-color: #e2e8f0;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
-            --shadow-md: 0 4px 14px rgba(0,0,0,0.08);
-            --shadow-lg: 0 10px 25px rgba(0,0,0,0.12);
+            --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+            --shadow-card: 0 10px 30px -5px rgba(15, 23, 42, 0.05), 0 4px 12px -2px rgba(15, 23, 42, 0.03);
+            --shadow-hover: 0 16px 36px -4px rgba(21, 128, 61, 0.12), 0 6px 16px -2px rgba(15, 23, 42, 0.04);
+            --danger-bg: #fef2f2;
+            --danger-border: #fecaca;
+            --danger-text: #991b1b;
         }
 
         * {
@@ -30,178 +35,258 @@
             padding: 0;
         }
 
-        body {
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            background-color: var(--bg-body);
-            color: var(--text-main);
-            line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
+        html {
+            scroll-behavior: smooth;
         }
 
-        /* Header */
+        body {
+            font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Hero Header */
         .header {
-            background: linear-gradient(135deg, #144d18 0%, #2e7d32 60%, #388e3c 100%);
+            background: radial-gradient(circle at 50% 10%, #1e5927 0%, #15461c 55%, #0d2f12 100%);
             color: #ffffff;
-            padding: 3.5rem 1.5rem 3rem;
+            padding: 4.5rem 1.5rem 4rem;
             text-align: center;
             position: relative;
-            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(13, 47, 18, 0.25);
+        }
+
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 30%, rgba(34, 197, 94, 0.15) 0%, transparent 40%),
+                        radial-gradient(circle at 80% 70%, rgba(74, 222, 128, 0.12) 0%, transparent 45%);
+            pointer-events: none;
         }
 
         .header-content {
-            max-width: 960px;
+            max-width: 880px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
         .badge-bar {
-            display: flex;
-            justify-content: center;
-            gap: 0.5rem;
+            display: inline-flex;
+            gap: 0.6rem;
             flex-wrap: wrap;
+            justify-content: center;
             margin-bottom: 1.25rem;
         }
 
         .badge {
-            background: rgba(255, 255, 255, 0.18);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.14);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             color: #ffffff;
-            padding: 0.4rem 1.1rem;
-            border-radius: 50px;
-            font-size: 0.82rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
+            padding: 0.4rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.6px;
             text-transform: uppercase;
             border: 1px solid rgba(255, 255, 255, 0.25);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
         }
 
         .header h1 {
-            font-size: 2.5rem;
+            font-size: clamp(2.1rem, 4.5vw, 3rem);
             font-weight: 800;
-            margin-bottom: 0.6rem;
-            letter-spacing: -0.5px;
+            color: #ffffff;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.03em;
+            line-height: 1.2;
         }
 
         .header p {
-            font-size: 1.1rem;
-            opacity: 0.92;
-            max-width: 700px;
-            margin: 0 auto;
+            font-size: clamp(1rem, 2vw, 1.15rem);
+            color: #e2e8f0 !important;
+            max-width: 720px;
+            margin: 0 auto 1.5rem;
+            font-weight: 400;
+            line-height: 1.6;
         }
 
         .meta-info {
-            margin-top: 1.25rem;
+            display: inline-flex;
+            gap: 0.85rem;
+            flex-wrap: wrap;
+            justify-content: center;
             font-size: 0.88rem;
-            opacity: 0.85;
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
         }
 
-        /* App Selector Pill Nav */
-        .app-selector {
-            max-width: 960px;
-            margin: -1.4rem auto 2rem;
-            padding: 0 1.5rem;
-            display: flex;
-            justify-content: center;
-            gap: 0.75rem;
-            flex-wrap: wrap;
+        .meta-chip {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 9999px;
+            padding: 0.35rem 0.95rem;
+            color: #ffffff;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            backdrop-filter: blur(8px);
         }
 
-        .app-tab {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            padding: 0.8rem 1.6rem;
-            border-radius: 30px;
+        .meta-chip strong {
             font-weight: 600;
+            color: #86efac;
+        }
+
+        /* Top Document Switcher Bar (Privacy Policy vs Terms vs Deletion) */
+        .nav-wrapper {
+            position: sticky;
+            top: 1rem;
+            z-index: 50;
+            max-width: 960px;
+            margin: -1.75rem auto 2.25rem;
+            padding: 0 1.25rem;
+        }
+
+        .doc-switcher {
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-color);
+            border-radius: 9999px;
+            padding: 0.45rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 12px 28px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+            overflow-x: auto;
+        }
+
+        .doc-tab {
+            background: transparent;
+            border: none;
+            padding: 0.7rem 1.4rem;
+            border-radius: 9999px;
+            font-family: inherit;
+            font-weight: 700;
             font-size: 0.92rem;
             color: var(--text-muted);
             cursor: pointer;
-            box-shadow: var(--shadow-sm);
-            transition: all 0.25s ease;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            white-space: nowrap;
         }
 
-        .app-tab:hover {
-            border-color: var(--primary);
-            color: var(--primary);
+        .doc-tab:hover {
+            color: var(--primary-dark);
+            background: rgba(240, 253, 244, 0.8);
         }
 
-        .app-tab.active {
+        .doc-tab.active {
             background: var(--primary);
             color: #ffffff;
-            border-color: var(--primary);
-            box-shadow: var(--shadow-md);
+            box-shadow: 0 4px 14px rgba(21, 128, 61, 0.35);
         }
 
-        /* Container & Cards */
+        .doc-tab.danger.active {
+            background: #b91c1c;
+            box-shadow: 0 4px 14px rgba(185, 28, 28, 0.35);
+        }
+
+        /* Container & Card Layout */
         .container {
             max-width: 960px;
-            margin: 0 auto 3.5rem;
-            padding: 0 1.5rem;
+            margin: 0 auto 4rem;
+            padding: 0 1.25rem;
         }
 
         .card {
             background: var(--bg-card);
-            border-radius: 18px;
-            padding: 2.5rem;
-            box-shadow: var(--shadow-sm);
+            border-radius: 24px;
+            padding: 3rem 2.75rem;
+            box-shadow: var(--shadow-card);
             border: 1px solid var(--border-color);
-            margin-bottom: 2rem;
         }
 
-        /* App Info Cards */
-        .app-info-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.25rem;
-            margin: 1.5rem 0 2rem;
+        .section-view {
+            display: none;
         }
 
-        .app-box {
-            background: var(--primary-light);
-            border: 1px solid rgba(46, 125, 50, 0.25);
+        .section-view.active {
+            display: block;
+            animation: fadeIn 0.25s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Sub-Navigation Quick Links */
+        .quick-nav {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
             border-radius: 14px;
-            padding: 1.5rem;
-            position: relative;
-        }
-
-        .app-box h3 {
-            color: var(--primary-dark);
-            font-size: 1.15rem;
-            margin-bottom: 0.5rem;
+            padding: 1rem 1.25rem;
+            margin-bottom: 2rem;
             display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
             align-items: center;
-            gap: 0.5rem;
         }
 
-        .app-box p {
-            font-size: 0.9rem;
-            color: #334155;
-            margin-bottom: 0.5rem;
+        .quick-nav-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--text-muted);
+            margin-right: 0.4rem;
         }
 
-        .code-tag {
-            background: #ffffff;
-            padding: 3px 9px;
-            border-radius: 6px;
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-            font-size: 0.82rem;
-            border: 1px solid #cbd5e1;
-            color: #0f172a;
+        .quick-link {
+            font-size: 0.85rem;
             font-weight: 600;
+            color: var(--primary);
+            padding: 0.3rem 0.75rem;
+            border-radius: 8px;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            text-decoration: none;
+            transition: all 0.15s ease;
         }
 
-        /* Section Headings */
+        .quick-link:hover {
+            border-color: var(--primary-border);
+            background: var(--primary-light);
+            text-decoration: none;
+        }
+
+        /* Typography & Content */
         h2 {
             font-size: 1.45rem;
-            color: var(--primary-dark);
-            margin: 2.25rem 0 1.1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--primary-light);
+            font-weight: 800;
+            color: var(--text-heading);
+            margin: 2.75rem 0 1rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1.5px solid #f1f5f9;
             display: flex;
             align-items: center;
             gap: 0.6rem;
+            letter-spacing: -0.02em;
+            scroll-margin-top: 6rem;
         }
 
         h2:first-of-type {
@@ -209,35 +294,146 @@
         }
 
         h3 {
-            font-size: 1.12rem;
-            color: var(--text-main);
-            margin: 1.4rem 0 0.6rem;
+            font-size: 1.15rem;
             font-weight: 700;
+            color: var(--text-heading);
+            margin: 1.5rem 0 0.65rem;
+            letter-spacing: -0.01em;
         }
 
         p {
-            margin-bottom: 1rem;
-            color: #334155;
+            margin-bottom: 1.1rem;
+            color: var(--text-main);
             font-size: 0.98rem;
+            line-height: 1.75;
         }
 
         ul, ol {
-            margin-bottom: 1.25rem;
+            margin-bottom: 1.35rem;
             padding-left: 1.6rem;
         }
 
         li {
-            margin-bottom: 0.5rem;
-            color: #334155;
-            font-size: 0.95rem;
+            margin-bottom: 0.55rem;
+            color: var(--text-main);
+            font-size: 0.96rem;
+            line-height: 1.65;
         }
 
-        /* Data Matrix Table */
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.15s ease;
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        /* App Info Grid */
+        .app-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.25rem;
+            margin: 1.5rem 0 2rem;
+        }
+
+        .app-box {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.75rem;
+            position: relative;
+            box-shadow: var(--shadow-subtle);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            scroll-margin-top: 6rem;
+        }
+
+        .app-box:hover {
+            border-color: var(--primary-border);
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
+
+        .app-box-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.85rem;
+        }
+
+        .app-icon {
+            font-size: 1.75rem;
+            line-height: 1;
+            padding: 0.55rem;
+            background: var(--primary-light);
+            border-radius: 12px;
+            display: inline-flex;
+        }
+
+        .app-box h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+        }
+
+        .meta-tag-group {
+            margin-top: 1rem;
+            padding-top: 0.9rem;
+            border-top: 1px dashed var(--border-color);
+        }
+
+        .meta-tag-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+
+        .code-tag {
+            background: #f1f5f9;
+            padding: 0.35rem 0.65rem;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', ui-monospace, monospace;
+            font-size: 0.82rem;
+            border: 1px solid #e2e8f0;
+            color: #0f172a;
+            font-weight: 500;
+            display: inline-block;
+            word-break: break-all;
+        }
+
+        /* Scope Badges */
+        .scope-badge {
+            display: inline-block;
+            padding: 0.25rem 0.65rem;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            background: #f1f5f9;
+            color: #334155;
+            border: 1px solid #e2e8f0;
+            white-space: nowrap;
+        }
+
+        .scope-badge.primary {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            border-color: var(--primary-border);
+        }
+
+        /* Table */
         .table-responsive {
             overflow-x: auto;
-            margin: 1.5rem 0 2rem;
-            border-radius: 12px;
+            margin: 1.75rem 0 2.25rem;
+            border-radius: 14px;
             border: 1px solid var(--border-color);
+            background: #ffffff;
+            box-shadow: var(--shadow-subtle);
         }
 
         table {
@@ -248,354 +444,953 @@
         }
 
         th {
-            background: #f1f5f9;
-            color: #0f172a;
+            background: #f8fafc;
+            color: #475569;
+            font-size: 0.78rem;
             font-weight: 700;
-            padding: 0.85rem 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            padding: 1rem 1.15rem;
             border-bottom: 1px solid var(--border-color);
         }
 
         td {
-            padding: 0.85rem 1rem;
+            padding: 1rem 1.15rem;
             border-bottom: 1px solid var(--border-color);
-            color: #334155;
+            color: var(--text-main);
             vertical-align: top;
+            line-height: 1.6;
         }
 
         tr:last-child td {
             border-bottom: none;
         }
 
-        tr:nth-child(even) {
-            background-color: #f8fafc;
+        tr:nth-child(even) td {
+            background-color: #fafbfc;
         }
 
-        /* Callout Boxes */
+        /* Permission Cards */
+        .permissions-grid {
+            display: grid;
+            gap: 1rem;
+            margin: 1.25rem 0 2rem;
+        }
+
+        .permission-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--primary);
+            padding: 1.25rem 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-subtle);
+            transition: transform 0.15s ease;
+        }
+
+        .permission-card:hover {
+            transform: translateX(3px);
+        }
+
+        .permission-card.removed {
+            border-left-color: #94a3b8;
+            background: #f8fafc;
+        }
+
+        .permission-card h4 {
+            color: var(--primary-dark);
+            font-size: 0.98rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .permission-card.removed h4 {
+            color: #475569;
+        }
+
+        .permission-card p {
+            font-size: 0.91rem;
+            color: #475569;
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        /* Callouts */
         .callout {
-            background: #fffbe6;
-            border-left: 4px solid #f59e0b;
-            padding: 1.1rem 1.3rem;
-            border-radius: 0 10px 10px 0;
+            background: #fefce8;
+            border-left: 4px solid #eab308;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
             margin: 1.5rem 0;
             font-size: 0.94rem;
-            color: #78350f;
+            color: #713f12;
+            border-top: 1px solid #fef08a;
+            border-right: 1px solid #fef08a;
+            border-bottom: 1px solid #fef08a;
         }
 
         .callout-title {
             font-weight: 700;
-            margin-bottom: 0.3rem;
-            display: block;
-            color: #92400e;
-        }
-
-        .permission-card {
-            background: #f0fdf4;
-            border: 1px solid #bbf7d0;
-            padding: 1.25rem;
-            border-radius: 12px;
-            margin: 1rem 0;
-        }
-
-        .permission-card h4 {
-            color: #166534;
-            font-size: 1rem;
             margin-bottom: 0.35rem;
+            display: block;
+            color: #854d0e;
+        }
+
+        /* Terms Accordion / Cards */
+        .term-card {
+            background: #ffffff;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.75rem 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow-subtle);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            scroll-margin-top: 6rem;
+        }
+
+        .term-card:hover {
+            border-color: var(--primary-border);
+            box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.04);
+        }
+
+        .term-header {
             display: flex;
             align-items: center;
-            gap: 0.4rem;
+            gap: 0.85rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid #f1f5f9;
         }
 
-        .permission-card p {
-            font-size: 0.9rem;
-            color: #14532d;
-            margin-bottom: 0;
+        .term-number {
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            font-weight: 800;
+            font-size: 0.85rem;
+            padding: 0.35rem 0.75rem;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            border: 1px solid var(--primary-border);
         }
 
+        .term-title {
+            font-size: 1.22rem;
+            font-weight: 700;
+            color: var(--text-heading);
+            margin: 0;
+        }
+
+        .term-content {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            line-height: 1.75;
+        }
+
+        /* Account Deletion Box (Google Play Mandate) */
         .deletion-box {
-            background: linear-gradient(to right, #eff6ff, #f0fdf4);
-            border: 1px solid #bfdbfe;
-            padding: 1.75rem;
-            border-radius: 14px;
+            background: linear-gradient(135deg, #f0fdf4 0%, #eff6ff 100%);
+            border: 1.5px solid #86efac;
+            padding: 2.25rem;
+            border-radius: 20px;
             margin: 2rem 0;
+            position: relative;
+            box-shadow: 0 10px 25px -5px rgba(34, 197, 94, 0.08);
+            scroll-margin-top: 6rem;
+        }
+
+        .deletion-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            background: #dcfce7;
+            color: #15803d;
+            border: 1px solid #86efac;
+            padding: 0.3rem 0.8rem;
+            border-radius: 9999px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.85rem;
         }
 
         .deletion-box h3 {
-            color: #1e40af;
+            color: #166534;
             margin-top: 0;
-            font-size: 1.25rem;
+            font-size: 1.35rem;
             margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .step-container {
+            display: grid;
+            gap: 1.25rem;
+            margin: 1.25rem 0;
+        }
+
+        .deletion-step-card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(226, 232, 240, 0.9);
+            border-radius: 14px;
+            padding: 1.4rem 1.6rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+
+        .deletion-step-card h4 {
+            font-size: 1.05rem;
+            color: #0f172a;
+            margin-bottom: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .steps-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+            counter-reset: custom-step;
+        }
+
+        .steps-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .steps-list li::before {
+            counter-increment: custom-step;
+            content: counter(custom-step);
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 1.35rem;
+            height: 1.35rem;
+            background: var(--primary);
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .deletion-action-bar {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .action-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            background: var(--primary);
+            color: #ffffff !important;
+            padding: 0.85rem 1.6rem;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 14px rgba(21, 128, 61, 0.35);
+            transition: all 0.2s ease;
+            text-decoration: none !important;
+        }
+
+        .action-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(21, 128, 61, 0.45);
+        }
+
+        .contact-box {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.75rem;
+            margin: 1.5rem 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-icon {
+            font-size: 1.2rem;
+            line-height: 1;
+            padding-top: 0.15rem;
         }
 
         /* Footer */
         .footer {
             text-align: center;
-            padding: 2.5rem 1.5rem;
+            padding: 3rem 1.5rem 3.5rem;
             color: var(--text-muted);
             font-size: 0.9rem;
             border-top: 1px solid var(--border-color);
             background: #ffffff;
         }
 
-        .footer a {
-            color: var(--primary);
-            text-decoration: none;
-            font-weight: 600;
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .footer a:hover {
-            text-decoration: underline;
+        .footer p {
+            margin-bottom: 0.5rem;
+            font-size: 0.88rem;
+            color: var(--text-muted);
         }
 
-        @media (max-width: 640px) {
-            .header h1 {
-                font-size: 1.85rem;
+        .footer code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            background: #f1f5f9;
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            color: #0f172a;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header {
+                padding: 3.5rem 1.25rem 3.25rem;
             }
             .card {
+                padding: 2rem 1.4rem;
+                border-radius: 18px;
+            }
+            .nav-wrapper {
+                margin-top: -1.25rem;
+            }
+            .doc-switcher {
+                border-radius: 16px;
+                padding: 0.35rem;
+                justify-content: flex-start;
+                overflow-x: auto;
+                scrollbar-width: none;
+            }
+            .doc-switcher::-webkit-scrollbar {
+                display: none;
+            }
+            .doc-tab {
+                padding: 0.55rem 1rem;
+                font-size: 0.85rem;
+            }
+            .deletion-box {
                 padding: 1.5rem;
             }
-            .app-selector {
-                flex-direction: column;
+            .term-card {
+                padding: 1.4rem 1.25rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
+    <!-- Header / Hero Section -->
     <header class="header">
         <div class="header-content">
             <div class="badge-bar">
-                <span class="badge">Google Play Console Compliant</span>
-                <span class="badge">GDPR & COPPA Ready</span>
+                <span class="badge">🛡️ Google Play Policy Compliant</span>
+                <span class="badge">🔒 GDPR & DPDP Ready</span>
+                <span class="badge">⚖️ IT Act 2000 Compliant</span>
             </div>
-            <h1>Privacy Policy</h1>
-            <p>Official Privacy Policy for Agrivaan Farmer & Owner Applications</p>
+            <h1 id="hero-title">Privacy Policy & Terms of Service</h1>
+            <p id="hero-subtitle">Official Legal Agreements, User Data Protection Policies &amp; In-App Account Deletion Procedures for Agrivaan Mobile Applications</p>
             <div class="meta-info">
-                <span>📅 <strong>Effective Date:</strong> September 23, 2026</span>
-                <span>🏢 <strong>Developer:</strong> Crafzio / Agrivaan</span>
+                <div class="meta-chip">
+                    <span>📅</span>
+                    <span><strong>Effective Date:</strong> September 23, 2026</span>
+                </div>
+                <div class="meta-chip">
+                    <span>🏢</span>
+                    <span><strong>Developer:</strong> Crafzio Technologies / Agrivaan</span>
+                </div>
+                <div class="meta-chip">
+                    <span>✉️</span>
+                    <span><strong>Official Contact:</strong> team@crafzio.in</span>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- App Switcher Bar -->
-    <div class="app-selector">
-        <button class="app-tab active" onclick="scrollToSection('all')">📱 All Applications Overview</button>
-        <button class="app-tab" onclick="scrollToSection('farmer')">🌾 Agrivaan Farmer App</button>
-        <button class="app-tab" onclick="scrollToSection('owner')">🚜 Agrivaan Owner App</button>
-        <button class="app-tab" onclick="scrollToSection('deletion')">🗑️ Data & Account Deletion</button>
+    <!-- Top Document Mode Switcher (Privacy Policy / Terms & Conditions / Account Deletion) -->
+    <div class="nav-wrapper">
+        <nav class="doc-switcher" aria-label="Legal Documents Navigation">
+            <button class="doc-tab active" id="tab-privacy" onclick="switchDocument('privacy')">
+                <span>🛡️</span> Privacy Policy
+            </button>
+            <button class="doc-tab" id="tab-terms" onclick="switchDocument('terms')">
+                <span>📜</span> Terms &amp; Conditions
+            </button>
+            <button class="doc-tab danger" id="tab-deletion" onclick="switchDocument('deletion')">
+                <span>🗑️</span> Account &amp; Data Deletion
+            </button>
+        </nav>
     </div>
 
     <!-- Main Content Container -->
     <main class="container">
-        
         <div class="card">
             
-            <!-- 1. Applications Covered -->
-            <h2>1. Applications Covered under This Policy</h2>
-            <p>This Privacy Policy explains how <strong>Crafzio ("Agrivaan", "we", "us", or "our")</strong> collects, uses, stores, discloses, and protects your information when you use our mobile applications published on the Google Play Store:</p>
-            
-            <div class="app-info-grid">
-                <div class="app-box" id="farmer">
-                    <h3>🌾 Agrivaan Farmer App</h3>
-                    <p>Designed for farmers to search, discover, book agricultural machinery/vehicles, make payments, track deliveries, and manage orders.</p>
-                    <p style="margin-top: 0.6rem;"><strong>Android Package Name:</strong><br><span class="code-tag">com.agrivaan.crafzio.farmer.app</span></p>
-                    <p style="margin-top: 0.4rem;"><strong>iOS Bundle ID:</strong><br><span class="code-tag">com.crafzio.agrivaanfarmer.agrivahanFarmerApp</span></p>
-                </div>
-
-                <div class="app-box" id="owner">
-                    <h3>🚜 Agrivaan Owner App</h3>
-                    <p>Designed for equipment and vehicle owners to list machinery, receive booking requests, track earnings, manage drivers, and dispatches.</p>
-                    <p style="margin-top: 0.6rem;"><strong>Android Package Name:</strong><br><span class="code-tag">com.agrivaan.crafzio.owner.app</span></p>
-                    <p style="margin-top: 0.4rem;"><strong>iOS Bundle ID:</strong><br><span class="code-tag">com.crafzio.agrivahanowner.agrivahanOwnerApp</span></p>
-                </div>
-            </div>
-
-            <p>By downloading, installing, registering, or using either application, you consent to the practices described in this Privacy Policy.</p>
-
-            <!-- 2. Detailed Data Matrix -->
-            <h2>2. Comprehensive Data Collection Matrix</h2>
-            <p>Below is a complete breakdown of all data collected across our mobile applications, the purpose of collection, and how it is processed:</p>
-
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Data Category</th>
-                            <th>Specific Data Collected</th>
-                            <th>App Covered</th>
-                            <th>Purpose & Necessity</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Personal Identification</strong></td>
-                            <td>Full Name, Phone Number, Profile Avatar, Address, Farm Location</td>
-                            <td>Farmer & Owner Apps</td>
-                            <td>Account creation, OTP authentication, booking verification, and customer support.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Verification & ID Documents</strong></td>
-                            <td>Driving License, Government ID, RC / Vehicle Ownership Papers</td>
-                            <td>Owner App</td>
-                            <td>Identity verification, fraud prevention, safety compliance, and legal owner onboarding.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Location Data</strong></td>
-                            <td>Precise GPS Location, Coarse Network Location, Pickup/Delivery Coordinates</td>
-                            <td>Farmer & Owner Apps</td>
-                            <td>Finding nearby machinery, routing equipment to farm fields, live trip tracking, and distance calculation.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Financial & Payments</strong></td>
-                            <td>Razorpay Transaction IDs, UPI payment handles, Bank Account & IFSC (Owners)</td>
-                            <td>Farmer & Owner Apps</td>
-                            <td>Processing booking payments (Farmer) and disbursing rental earnings/payouts (Owner).</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Camera & Media</strong></td>
-                            <td>Photos captured via Camera or selected from Storage/Gallery</td>
-                            <td>Farmer & Owner Apps</td>
-                            <td>Uploading machinery images, profile pictures, document verification, and damage inspection reports.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Device & Technical Identifiers</strong></td>
-                            <td>FCM Device Token, IP Address, Device Model, OS Version, App Crash Logs</td>
-                            <td>Farmer & Owner Apps</td>
-                            <td>Sending push notifications, system security, performance optimization, and debugging.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- 3. Explicit Device Permissions Declared -->
-            <h2>3. Android Permissions Required & Rationale</h2>
-            <p>Our applications request specific device permissions to operate core functions. Below is an exhaustive list of all permissions declared in our Android Manifest files:</p>
-
-            <div class="permission-card">
-                <h4>📍 Location Permissions (ACCESS_FINE_LOCATION & ACCESS_COARSE_LOCATION)</h4>
-                <p><strong>Used for:</strong> Detecting your current field location to search for available nearby machinery (Farmer App) and tracking equipment movement during active bookings (Owner App).</p>
-            </div>
-
-            <div class="permission-card">
-                <h4>🔔 Notification Permission (POST_NOTIFICATIONS & USE_FULL_SCREEN_INTENT)</h4>
-                <p><strong>Used for:</strong> Sending instant alerts regarding booking approvals, payment updates, driver dispatches, and lock-screen job notifications via Firebase Cloud Messaging (FCM).</p>
-            </div>
-
-            <div class="permission-card">
-                <h4>🔄 Foreground Service (FOREGROUND_SERVICE & FOREGROUND_SERVICE_DATA_SYNC)</h4>
-                <p><strong>Used for:</strong> Ensuring active trip synchronization and machinery status sync remains uninterrupted even when switching between apps during an active rental service.</p>
-            </div>
-
-            <div class="permission-card">
-                <h4>📷 Camera & Storage Permissions (CAMERA, READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE)</h4>
-                <p><strong>Used for:</strong> Allowing vehicle owners to photograph machinery and upload verification documents, and letting farmers upload profile pictures or field condition receipts.</p>
-            </div>
-
-            <div class="permission-card">
-                <h4>💳 Direct Payment & Package Visibility Intents (PhonePe, GPay, Paytm, BHIM)</h4>
-                <p><strong>Used for:</strong> Enabling direct UPI Intent payment integration via Razorpay SDK, allowing seamless 1-click checkout through installed UPI payment applications on your device.</p>
-            </div>
-
-            <div class="permission-card">
-                <h4>📌 Home Screen Widget (RECEIVE_BOOT_COMPLETED & APPWIDGET_UPDATE)</h4>
-                <p><strong>Used for:</strong> Updating glanceable home screen widgets on your phone for active booking statuses without requiring you to constantly open the app.</p>
-            </div>
-
-            <div class="callout">
-                <span class="callout-title">⚙️ How to Manage or Revoke Permissions</span>
-                You can grant or revoke any of these permissions at any time on your Android device by navigating to <strong>Settings > Apps & Notifications > Agrivaan Farmer App / Owner App > Permissions</strong>.
-            </div>
-
-            <!-- 4. Third-Party Service Integrations -->
-            <h2>4. Third-Party SDKs & Data Sharing</h2>
-            <p>We do not sell, rent, or trade your personal data. We integrate with trusted third-party service providers to power essential app functionality under strict data confidentiality agreements:</p>
-            
-            <ul>
-                <li><strong>Google Maps Platform & Geolocation APIs:</strong> Renders interactive maps, calculates field-to-owner distances, and geocodes delivery addresses. (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>)</li>
-                <li><strong>Google Firebase (FCM & Analytics):</strong> Delivers secure real-time push notifications, manages app performance, and analyzes crash diagnostics. (<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Terms</a>)</li>
-                <li><strong>Razorpay Payment Gateway:</strong> Encrypts and processes online payments (UPI, Cards, Netbanking) and handles automated owner payouts. All financial transactions adhere to PCI-DSS standards. (<a href="https://razorpay.com/privacy/" target="_blank" rel="noopener">Razorpay Privacy Policy</a>)</li>
-            </ul>
-
-            <!-- 5. Data Retention & Mandatory Account Deletion Section -->
-            <h2 id="deletion">5. Data Retention & Mandatory Account Deletion Policy</h2>
-            <div class="deletion-box">
-                <h3>🗑️ Requesting Account & Data Deletion (Google Play Mandate)</h3>
-                <p>Google Play Console policy mandates that all users must have a clear mechanism to request full account and data deletion. We fully honor your right to be forgotten.</p>
+            <!-- ========================================== -->
+            <!-- VIEW 1: PRIVACY POLICY                     -->
+            <!-- ========================================== -->
+            <section id="view-privacy" class="section-view active">
                 
-                <p><strong>Option A: In-App Account Deletion</strong></p>
-                <ol>
-                    <li>Open either the <strong>Agrivaan Farmer App</strong> or <strong>Agrivaan Owner App</strong>.</li>
-                    <li>Navigate to <strong>Account / Profile Settings</strong>.</li>
-                    <li>Tap on <strong>"Delete Account"</strong> and confirm your mobile number via OTP.</li>
-                </ol>
+                <!-- Quick Navigation Bar for Privacy Policy -->
+                <div class="quick-nav">
+                    <span class="quick-nav-label">Jump to:</span>
+                    <a href="#apps-covered" class="quick-link">📱 Apps Covered</a>
+                    <a href="#data-matrix" class="quick-link">📊 Data Matrix</a>
+                    <a href="#permissions" class="quick-link">⚙️ Device Permissions</a>
+                    <a href="#third-party" class="quick-link">🌐 Third Parties</a>
+                    <a href="#acdelete-summary" class="quick-link">🗑️ Account Deletion</a>
+                    <a href="#contact" class="quick-link">📫 Contact</a>
+                </div>
 
-                <p style="margin-top: 1rem;"><strong>Option B: Web / Email Deletion Request</strong></p>
-                <p>If you have uninstalled the application or cannot access your phone, send an email to our Data Protection Team at <a href="mailto:support@agrivaan.com?subject=Account%20and%20Data%20Deletion%20Request">support@agrivaan.com</a> or <a href="mailto:crafzio@gmail.com?subject=Account%20and%20Data%20Deletion%20Request">crafzio@gmail.com</a> with:</p>
+                <!-- 1. Applications Covered -->
+                <h2 id="apps-covered">1. Applications Covered under This Policy</h2>
+                <p>This Privacy Policy explains how <strong>Crafzio Technologies ("Agrivaan", "we", "us", or "our")</strong> collects, uses, processes, stores, and protects personal data when you interact with our agricultural mobile applications published on the Google Play Store:</p>
+                
+                <div class="app-info-grid">
+                    <!-- Farmer App -->
+                    <div class="app-box" id="farmer-app-card">
+                        <div class="app-box-header">
+                            <div class="app-icon">🌾</div>
+                            <div>
+                                <h3>Agrivaan Farmer App</h3>
+                                <span class="scope-badge primary">Farmer &amp; Consumer Platform</span>
+                            </div>
+                        </div>
+                        <p>Designed for farmers and agricultural landowners to discover nearby machinery, book verified tractor operators, log field hours, complete cashless payments, and track equipment transit.</p>
+                        <div class="meta-tag-group">
+                            <div class="meta-tag-label">Android Package Name</div>
+                            <span class="code-tag">com.agrivaan.crafzio.farmer.app</span>
+                        </div>
+                        <div class="meta-tag-group" style="margin-top: 0.6rem; padding-top: 0.6rem;">
+                            <div class="meta-tag-label">iOS Bundle Identifier</div>
+                            <span class="code-tag">com.crafzio.agrivaanfarmer.agrivahanFarmerApp</span>
+                        </div>
+                    </div>
+
+                    <!-- Owner App -->
+                    <div class="app-box" id="owner-app-card">
+                        <div class="app-box-header">
+                            <div class="app-icon">🚜</div>
+                            <div>
+                                <h3>Agrivaan Owner App</h3>
+                                <span class="scope-badge primary">Equipment &amp; Fleet Operators</span>
+                            </div>
+                        </div>
+                        <p>Designed for agricultural vehicle owners and equipment operators to list tractors, harvesters, and implements, accept field bookings, dispatch drivers, and receive direct payments.</p>
+                        <div class="meta-tag-group">
+                            <div class="meta-tag-label">Android Package Name</div>
+                            <span class="code-tag">com.agrivaan.crafzio.owner.app</span>
+                        </div>
+                        <div class="meta-tag-group" style="margin-top: 0.6rem; padding-top: 0.6rem;">
+                            <div class="meta-tag-label">iOS Bundle Identifier</div>
+                            <span class="code-tag">com.crafzio.agrivahanowner.agrivahanOwnerApp</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p>By downloading, installing, registering, or using either application, you consent to the data practices and terms outlined in this Privacy Policy.</p>
+
+                <!-- 2. Detailed Data Matrix -->
+                <h2 id="data-matrix">2. Comprehensive Data Collection Matrix</h2>
+                <p>In accordance with Google Play's User Data policy and the Digital Personal Data Protection Act (DPDP), 2023, below is complete disclosure of all data collected, its operational purpose, and app scope:</p>
+
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="min-width: 170px;">Data Category</th>
+                                <th style="min-width: 220px;">Specific Data Items</th>
+                                <th style="min-width: 140px;">Scope</th>
+                                <th style="min-width: 250px;">Purpose &amp; Necessity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Personal Identification</strong></td>
+                                <td>Full Name, Phone Number, Profile Photo, Farm / Residential Address</td>
+                                <td><span class="scope-badge primary">Farmer &amp; Owner</span></td>
+                                <td>User onboarding, secure SMS OTP authentication, booking verification, and customer support communications.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Identity &amp; Vehicle Verification</strong></td>
+                                <td>Driving License, Government ID, RC / Vehicle Ownership Registration</td>
+                                <td><span class="scope-badge">Owner App</span></td>
+                                <td>Mandatory safety onboarding, fraud prevention, regulatory compliance, and equipment owner legitimacy checks.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Geographical &amp; Location Data</strong></td>
+                                <td>Precise GPS Coordinates, Coarse Network Location, Farm Plot Coordinates</td>
+                                <td><span class="scope-badge primary">Farmer &amp; Owner</span></td>
+                                <td>Searching nearby machinery, routing equipment to remote farm fields, and live tracking of active bookings.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Financial &amp; Transaction Details</strong></td>
+                                <td>Razorpay Transaction IDs, UPI handles, Bank Account &amp; IFSC (Owners)</td>
+                                <td><span class="scope-badge primary">Farmer &amp; Owner</span></td>
+                                <td>Processing booking charges for farmers and disbursing rental payouts directly to equipment owners.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Photos, Media &amp; Camera</strong></td>
+                                <td>Photos captured via camera or selected from device gallery</td>
+                                <td><span class="scope-badge primary">Farmer &amp; Owner</span></td>
+                                <td>Uploading machinery listings, damage inspection photos, profile photos, and attaching work receipts.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Device Identifiers &amp; Diagnostics</strong></td>
+                                <td>Firebase Cloud Messaging (FCM) Token, Device Model, OS Version, Crash Logs</td>
+                                <td><span class="scope-badge primary">Farmer &amp; Owner</span></td>
+                                <td>Delivering instant push notifications for orders, fraud prevention, app reliability, and crash diagnostics.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 3. Explicit Device Permissions Declared -->
+                <h2 id="permissions">3. Android Permissions Required &amp; Rationale</h2>
+                <p>Our applications request only essential Android runtime permissions required for core agricultural functions:</p>
+
+                <div class="permissions-grid">
+                    <div class="permission-card">
+                        <h4>📍 Location Permissions (ACCESS_FINE_LOCATION &amp; ACCESS_COARSE_LOCATION)</h4>
+                        <p><strong>Rationale:</strong> Enables the Farmer App to identify your exact field coordinates to match nearby tractors and implements, and allows the Owner App to compute transit routes and dispatch ETAs.</p>
+                    </div>
+
+                    <div class="permission-card">
+                        <h4>🔔 Notification Permissions (POST_NOTIFICATIONS)</h4>
+                        <p><strong>Rationale:</strong> Delivers instant alerts for booking requests, driver dispatch updates, work timer OTPs, and payment receipts via Firebase Cloud Messaging (FCM).</p>
+                    </div>
+
+                    <div class="permission-card">
+                        <h4>💳 Direct UPI App Package Visibility (queries tag)</h4>
+                        <p><strong>Rationale:</strong> Enables seamless 1-click UPI checkout via the certified Razorpay SDK, allowing users to pay directly through installed UPI apps (PhonePe, Google Pay, Paytm, BHIM).</p>
+                    </div>
+
+                    <div class="permission-card">
+                        <h4>📌 Home Screen Widget (RECEIVE_BOOT_COMPLETED &amp; APPWIDGET_UPDATE)</h4>
+                        <p><strong>Rationale:</strong> Updates real-time booking status on your phone's home screen widget without requiring continuous app launches.</p>
+                    </div>
+
+                    <div class="permission-card removed">
+                        <h4>🛡️ Explicitly Removed Permissions (Privacy &amp; Battery Protection)</h4>
+                        <p><strong>Status:</strong> Permissions such as <code>FOREGROUND_SERVICE</code> and <code>USE_FULL_SCREEN_INTENT</code> have been explicitly removed (via manifest rules) to eliminate intrusive background operations and optimize device battery life.</p>
+                    </div>
+                </div>
+
+                <div class="callout">
+                    <span class="callout-title">⚙️ Managing Your App Permissions</span>
+                    You can inspect, grant, or revoke permissions at any time through your Android settings: <strong>Settings &gt; Apps &gt; AgriVaan Farmer App / Owner App &gt; Permissions</strong>.
+                </div>
+
+                <!-- 4. Third-Party Service Integrations -->
+                <h2 id="third-party">4. Third-Party Services &amp; SDK Integrations</h2>
+                <p>We do not sell, rent, or commercialize your personal data. We partner strictly with certified infrastructure and payment service providers:</p>
+                
                 <ul>
-                    <li>Subject: <strong>Account and Data Deletion Request</strong></li>
-                    <li>Your Registered Mobile Number</li>
-                    <li>Application Used (Farmer App or Owner App)</li>
+                    <li><strong>Google Maps Platform:</strong> Provides mapping, reverse geocoding, and field distance calculations. (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>)</li>
+                    <li><strong>Google Firebase (FCM &amp; Crashlytics):</strong> Delivers encrypted push notifications and captures anonymous performance logs. (<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Terms</a>)</li>
+                    <li><strong>Razorpay Payment Gateway:</strong> Compliant with RBI and PCI-DSS Level 1 standards for processing UPI, card, and net-banking transactions. (<a href="https://razorpay.com/privacy/" target="_blank" rel="noopener">Razorpay Privacy Policy</a>)</li>
                 </ul>
 
-                <p style="margin-top: 0.75rem;"><strong>What happens after your request:</strong></p>
-                <p>All personal profile data, saved locations, vehicle listings, and FCM tokens will be permanently deleted from our servers within <strong>30 days</strong>. Transactional records (such as tax invoices) will be retained solely to comply with applicable statutory tax laws.</p>
-            </div>
+                <!-- 5. Children's Privacy -->
+                <h2>5. Children's Privacy (COPPA &amp; DPDP Compliance)</h2>
+                <p>Our applications and services are strictly targeted at agricultural professionals, vehicle owners, and commercial operators who are 18 years of age or older. We do not intentionally solicit or collect personal information from individuals under the age of 18.</p>
 
-            <!-- 6. Children's Privacy -->
-            <h2>6. Children's Privacy (COPPA Compliance)</h2>
-            <p>Our applications are designed exclusively for adult farmers, machinery owners, and agricultural service providers aged 18 and older. We do not knowingly collect personal data from children under 13. If we discover that a minor has submitted personal information, we will delete it immediately.</p>
+                <!-- 6. Security Measures -->
+                <h2>6. Technical Data Security Measures</h2>
+                <p>We apply rigorous industry-standard administrative, physical, and electronic controls to safeguard personal data:</p>
+                <ul>
+                    <li><strong>Transport Layer Security:</strong> All client-server communications are strictly encrypted using TLS/HTTPS 1.3.</li>
+                    <li><strong>Token Security:</strong> Authentication tokens are stored securely in encrypted private device storage (Android EncryptedSharedPreferences).</li>
+                    <li><strong>Access Control:</strong> Backend databases enforce strict role-based access control (RBAC) and network isolation.</li>
+                </ul>
 
-            <!-- 7. Security Measures -->
-            <h2>7. Data Security Measures</h2>
-            <p>We implement robust technical and organizational security controls to protect your data:</p>
-            <ul>
-                <li>TLS/HTTPS 1.3 encryption for all network data in transit.</li>
-                <li>Encrypted local storage (`shared_preferences`) for auth tokens.</li>
-                <li>Role-based API authorization controls on our Django backend infrastructure.</li>
-            </ul>
+                <!-- 7. In-App Deletion Summary -->
+                <h2 id="acdelete-summary">7. User Account &amp; Data Deletion (Play Store Mandate)</h2>
+                <p>We provide full self-service account deletion directly inside both applications, as well as a direct web/email request channel.</p>
+                <p>For complete step-by-step instructions and to submit an instant deletion request, please switch to the <a href="javascript:void(0)" onclick="switchDocument('deletion')"><strong>Account &amp; Data Deletion Section</strong></a>.</p>
 
-            <!-- 8. Updates to Privacy Policy -->
-            <h2>8. Changes to This Privacy Policy</h2>
-            <p>We may update this Privacy Policy from time to time to reflect updates in app features or Play Store regulations. Any changes will be published directly on this web page with a revised "Effective Date".</p>
+                <!-- 8. Contact & Support Information -->
+                <h2 id="contact">8. Contact &amp; Data Protection Officer</h2>
+                <p>For any privacy queries, feedback, or data requests, please contact our support team:</p>
+                
+                <div class="contact-box">
+                    <div class="contact-item">
+                        <span class="contact-icon">🏢</span>
+                        <div>
+                            <strong>Developer Entity:</strong><br>
+                            Crafzio Technologies Pvt. Ltd. / Agrivaan
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <div>
+                            <strong>Primary Support Email:</strong><br>
+                            <a href="mailto:team@crafzio.in">team@crafzio.in</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📫</span>
+                        <div>
+                            <strong>Alternate Contact Email:</strong><br>
+                            <a href="mailto:support@agrivaan.com">support@agrivaan.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <div>
+                            <strong>Covered Applications:</strong><br>
+                            Agrivaan Farmer App &amp; Agrivaan Owner App
+                        </div>
+                    </div>
+                </div>
 
-            <!-- 9. Contact Us -->
-            <h2>9. Contact & Support Information</h2>
-            <p>For any privacy queries, feedback, or data requests, please contact our support team:</p>
-            <ul>
-                <li><strong>Developer / Business Entity:</strong> Crafzio / Agrivaan</li>
-                <li><strong>Support Email:</strong> <a href="mailto:support@agrivaan.com">support@agrivaan.com</a> | <a href="mailto:crafzio@gmail.com">crafzio@gmail.com</a></li>
-                <li><strong>Covered Apps:</strong> Agrivaan Farmer App & Agrivaan Owner App</li>
-            </ul>
+            </section>
+
+
+            <!-- ========================================== -->
+            <!-- VIEW 2: TERMS AND CONDITIONS               -->
+            <!-- ========================================== -->
+            <section id="view-terms" class="section-view">
+                
+                <div class="quick-nav">
+                    <span class="quick-nav-label">Sections:</span>
+                    <a href="#term-01" class="quick-link">01. Acceptance</a>
+                    <a href="#term-02" class="quick-link">02. Eligibility</a>
+                    <a href="#term-03" class="quick-link">03. Booking</a>
+                    <a href="#term-04" class="quick-link">04. Work Timer &amp; OTP</a>
+                    <a href="#term-05" class="quick-link">05. Pricing &amp; Fuel</a>
+                    <a href="#term-06" class="quick-link">06. Payments</a>
+                    <a href="#term-07" class="quick-link">07. Cancellations</a>
+                    <a href="#term-08" class="quick-link">08. Safety</a>
+                    <a href="#term-09" class="quick-link">09. Liability</a>
+                    <a href="#term-10" class="quick-link">10. Disputes</a>
+                </div>
+
+                <h2>AgriVaan - Terms and Conditions (User Agreement)</h2>
+                <p style="margin-bottom: 2rem;">Please read these Terms and Conditions carefully before using the <strong>Agrivaan Farmer App</strong> or <strong>Agrivaan Owner App</strong>. These terms constitute a legally binding service agreement between you and <strong>Crafzio Technologies Pvt. Ltd.</strong></p>
+
+                <!-- Section 01 -->
+                <div class="term-card" id="term-01">
+                    <div class="term-header">
+                        <span class="term-number">SECTION 01</span>
+                        <h3 class="term-title">🤝 Introduction &amp; Acceptance of Terms</h3>
+                    </div>
+                    <div class="term-content">
+                        <p>Welcome to AgriVaan ("Application", "Platform"), an agricultural technology platform owned and operated by <strong>Crafzio Technologies Pvt. Ltd.</strong> ("Company", "we", "us", "our").</p>
+                        <p>By downloading, registering, accessing, or using this Application, you ("Farmer", "Equipment Owner", "User", "you") agree to be bound by these Terms and Conditions. If you do not agree to all terms, you must discontinue using the platform immediately.</p>
+                        <p>AgriVaan serves as a digital intermediary platform connecting agricultural landholders and farmers with verified machinery owners, tractor operators, and agricultural equipment service providers.</p>
+                    </div>
+                </div>
+
+                <!-- Section 02 -->
+                <div class="term-card" id="term-02">
+                    <div class="term-header">
+                        <span class="term-number">SECTION 02</span>
+                        <h3 class="term-title">🪪 Eligibility &amp; Account Registration</h3>
+                    </div>
+                    <div class="term-content">
+                        <ul>
+                            <li><strong>Age Requirement:</strong> You must be at least 18 years of age and legally competent to enter into binding agreements under the Indian Contract Act, 1872.</li>
+                            <li><strong>Accurate Information:</strong> You agree to provide true, accurate, and current information regarding your mobile number, farm location, crop types, and profile during registration.</li>
+                            <li><strong>OTP Authentication:</strong> Authentication occurs via One-Time Password (OTP) sent to your registered mobile phone number. You are solely responsible for maintaining the confidentiality of your credentials and account sessions.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Section 03 -->
+                <div class="term-card" id="term-03">
+                    <div class="term-header">
+                        <span class="term-number">SECTION 03</span>
+                        <h3 class="term-title">🚜 Machinery Booking &amp; Scheduling</h3>
+                    </div>
+                    <div class="term-content">
+                        <ul>
+                            <li><strong>Service Request:</strong> When booking a tractor, harvester, or agricultural implement, you specify the farm location, crop, required service date, estimated acreage, or required hours.</li>
+                            <li><strong>Owner Confirmation:</strong> A booking request represents an offer to hire machinery. The booking becomes binding once an equipment owner accepts your order.</li>
+                            <li><strong>Dispatch Notification:</strong> Real-time status updates and estimated time of arrival (ETA) are provided through the app once the operator begins transit to your location.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Section 04 -->
+                <div class="term-card" id="term-04">
+                    <div class="term-header">
+                        <span class="term-number">SECTION 04</span>
+                        <h3 class="term-title">⏱️ Hourly Work Timer &amp; Dual OTP Validation</h3>
+                    </div>
+                    <div class="term-content">
+                        <ul>
+                            <li><strong>Start OTP:</strong> Field work execution officially commences only when the farmer provides the secure 4-digit "Start OTP" to the machinery operator upon arrival at the farm field.</li>
+                            <li><strong>Real-Time Timer:</strong> The active work duration is measured using our synchronized digital work timer. Brief operational pauses (e.g., refilling, obstruction clearance) can be marked in the application.</li>
+                            <li><strong>Completion OTP:</strong> Work officially concludes when the farmer verifies completion and shares the "Finish OTP" with the operator. Final billing is calculated based on verified meter logs and agreed hourly/acreage rates.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Section 05 -->
+                <div class="term-card" id="term-05">
+                    <div class="term-header">
+                        <span class="term-number">SECTION 05</span>
+                        <h3 class="term-title">🧾 Transparent Pricing, Fuel &amp; Billing</h3>
+                    </div>
+                    <div class="term-content">
+                        <ul>
+                            <li><strong>Rate Transparency:</strong> Hourly and daily rental rates displayed on the app are determined in consultation with equipment owners and prevailing regional agricultural benchmarks.</li>
+                            <li><strong>Fuel Policy:</strong> Standard quotes indicate whether diesel/fuel is included or provided separately. Any additional fuel arranged by the farmer is credited against final settlement.</li>
+                            <li><strong>Minimum Billing:</strong> Specialized machinery categories may require a minimum threshold of 1 hour of operational billing.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Section 06 -->
+                <div class="term-card" id="term-06">
+                    <div class="term-header">
+                        <span class="term-number">SECTION 06</span>
+                        <h3 class="term-title">💳 Payments &amp; Secure Gateway</h3>
+                    </div>
+                    <div class="term-content">
+                        <ul>
+                            <li><strong>Payment Methods:</strong> Payments are facilitated via the integrated Razorpay gateway (UPI, Net Banking, Debit/Credit Cards) or authorized Cash-on-Completion (Cash/Direct Transfer).</li>
+                            <li><strong>Digital Invoicing:</strong> A GST-compliant digital summary invoice is generated immediately upon work completion and stored in your Transaction History.</li>
+                            <li><strong>Security:</strong> All payment transactions are encrypted using 256-bit SSL encryption. AgriVaan does not store card CVVs or banking PINs.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Section 07 -->
+                <div class="term-card" id="term-07">
+                    <div class="term-header">
+                        <span class="term-number">SECTION 07</span>
+                        <h3 class="term-title">🚫 Cancellations, Rescheduling &amp; Refunds</h3>
+                    </div>
+                    <div class="term-content">
+                        <ul>
+                            <li><strong>Cancellation Before Dispatch:</strong> Farmers may cancel bookings free of charge before the operator initiates vehicle dispatch.</li>
+                            <li><strong>Late Cancellation:</strong> If a booking is cancelled after the machinery is en-route or has reached the farm, a nominal transit compensation fee may be applied to compensate the operator for transit fuel.</li>
+                            <li><strong>Weather &amp; Force Majeure:</strong> In cases of severe rainfall, waterlogged soil, or natural disasters, bookings can be rescheduled without penalty.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Section 08 -->
+                <div class="term-card" id="term-08">
+                    <div class="term-header">
+                        <span class="term-number">SECTION 08</span>
+                        <h3 class="term-title">🛡️ Farmer Responsibilities &amp; Field Safety</h3>
+                    </div>
+                    <div class="term-content">
+                        <ul>
+                            <li><strong>Field Accessibility:</strong> You must ensure that approach paths, field gates, and terrain are safe and accessible for the requested machinery dimensions.</li>
+                            <li><strong>Boundary Guidance:</strong> The farmer or an authorized representative must be present to guide the operator regarding plot boundaries, irrigation pipes, underground cables, and open wells.</li>
+                            <li><strong>Hazard Disclosure:</strong> Hazardous field conditions or steep drops must be disclosed to the machinery operator prior to commencing work.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Section 09 -->
+                <div class="term-card" id="term-09">
+                    <div class="term-header">
+                        <span class="term-number">SECTION 09</span>
+                        <h3 class="term-title">⚖️ Limitation of Liability &amp; Marketplace Role</h3>
+                    </div>
+                    <div class="term-content">
+                        <ul>
+                            <li><strong>Intermediary Disclaimer:</strong> AgriVaan operates as an agricultural aggregator and technology intermediary under Section 79 of the Information Technology Act, 2000.</li>
+                            <li><strong>Machinery Fitness:</strong> Equipment owners are independent service providers responsible for equipment fitness, fitness certificates, and operator competence.</li>
+                            <li><strong>Unforeseen Breakdowns:</strong> In the rare event of mechanical failure during field operations, the timer pauses immediately, and you are only charged for actual productive operational hours completed.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Section 10 -->
+                <div class="term-card" id="term-10">
+                    <div class="term-header">
+                        <span class="term-number">SECTION 10</span>
+                        <h3 class="term-title">🏛️ Dispute Resolution &amp; Grievance Redressal</h3>
+                    </div>
+                    <div class="term-content">
+                        <ul>
+                            <li><strong>Customer Care:</strong> In case of billing discrepancies, service quality issues, or operator misconduct, you can register a ticket via the Support &amp; Customer Help screen within 48 hours.</li>
+                            <li><strong>Arbitration &amp; Jurisdiction:</strong> Any unresolved disputes arising from platform usage shall be subject to the exclusive jurisdiction of the competent courts in Bengaluru, Karnataka, India.</li>
+                            <li><strong>Legal &amp; Terms Contact:</strong> For legal inquiries or terms notices, email our legal team at <a href="mailto:team@crafzio.in">team@crafzio.in</a> or <a href="mailto:support@agrivaan.com">support@agrivaan.com</a>.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- ========================================== -->
+            <!-- VIEW 3: ACCOUNT & DATA DELETION            -->
+            <!-- ========================================== -->
+            <section id="view-deletion" class="section-view">
+                
+                <h2>User Account &amp; Data Deletion Policy</h2>
+                <p>Google Play Console policy mandates that all users must have a transparent, easily accessible mechanism to request full account and data deletion. We provide two convenient methods:</p>
+
+                <!-- Detailed Deletion Box -->
+                <div class="deletion-box">
+                    <div class="deletion-badge">
+                        <span>🛡️</span> Google Play Data Safety Compliance
+                    </div>
+                    <h3>🗑️ In-App &amp; Web Account Deletion Options</h3>
+                    <p>You have the absolute right to delete your AgriVaan account and permanently erase your personal identification details, farm addresses, and device tokens.</p>
+                    
+                    <div class="step-container">
+                        
+                        <!-- METHOD 1: IN-APP -->
+                        <div class="deletion-step-card">
+                            <h4>📱 Method 1: Self-Service In-App Deletion (Instant)</h4>
+                            <p style="font-size: 0.92rem; color: #475569; margin-bottom: 0.85rem;">
+                                You can execute permanent account deletion instantly from inside the <strong>Agrivaan Farmer App</strong> or <strong>Agrivaan Owner App</strong>:
+                            </p>
+                            <ol class="steps-list">
+                                <li>Open the <strong>AgriVaan App</strong> on your mobile device.</li>
+                                <li>Tap on the <strong>Profile / Account</strong> tab from the bottom navigation bar.</li>
+                                <li>Select <strong>"Security &amp; Privacy"</strong> (or <em>"App Security &amp; Privacy Settings"</em>).</li>
+                                <li>Scroll down to the red danger zone and tap <strong>"Delete Account"</strong> (or <em>"Deactivate My AgriVaan Account"</em>).</li>
+                                <li>Choose your preferred verification method:
+                                    <ul style="margin-top: 0.4rem; margin-bottom: 0.4rem; padding-left: 1.2rem;">
+                                        <li><strong>Verify with OTP:</strong> Tap <em>"Send Verification OTP"</em> to receive a secure SMS code on your registered mobile number, then enter the 4-digit OTP.</li>
+                                        <li><strong>Verify with Password:</strong> Enter your account password to authorize deletion.</li>
+                                    </ul>
+                                </li>
+                                <li>Tap <strong>"Permanently Delete Account"</strong>. Your session is terminated immediately and credentials are invalidated.</li>
+                            </ol>
+                        </div>
+
+                        <!-- METHOD 2: EMAIL / WEB -->
+                        <div class="deletion-step-card">
+                            <h4>✉️ Method 2: Web &amp; Email Deletion Request (App Uninstalled)</h4>
+                            <p style="font-size: 0.92rem; color: #475569; margin-bottom: 0.85rem;">
+                                If you have uninstalled the application, lost your phone, or cannot access the app, you can request account deletion directly from our Data Protection Team:
+                            </p>
+                            <p style="margin-bottom: 0.6rem;">
+                                Send an email to: <a href="mailto:team@crafzio.in?subject=Account%20and%20Data%20Deletion%20Request"><strong>team@crafzio.in</strong></a> (or <a href="mailto:support@agrivaan.com?subject=Account%20and%20Data%20Deletion%20Request">support@agrivaan.com</a>)
+                            </p>
+                            <ul style="margin-bottom: 1rem;">
+                                <li><strong>Email Subject:</strong> <code>Account and Data Deletion Request</code></li>
+                                <li><strong>Required Details:</strong> Your registered 10-digit mobile number and the application used (Farmer App or Owner App).</li>
+                            </ul>
+                            
+                            <a href="mailto:team@crafzio.in?subject=Account%20and%20Data%20Deletion%20Request&body=Hello%20Agrivaan%20Support%20Team%2C%0A%0APlease%20permanently%20delete%20my%20AgriVaan%20account%20and%20all%20associated%20personal%20data.%0A%0AMy%20Registered%20Mobile%20Number%3A%20%0AApplication%20Used%20(Farmer%20App%20%2F%20Owner%20App)%3A%20%0AReason%20for%20Deletion%20(Optional)%3A%20%0A%0AThank%20you." class="action-button">
+                                ✉️ Send Data Deletion Request Email (team@crafzio.in)
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Retention & Purging Notice -->
+                    <div style="margin-top: 1.5rem; border-top: 1px dashed #86efac; padding-top: 1.25rem; font-size: 0.92rem; color: #166534; line-height: 1.65;">
+                        <p style="margin-bottom: 0.5rem;"><strong>🔒 What Happens After Deletion:</strong></p>
+                        <ul style="padding-left: 1.4rem; margin-bottom: 0;">
+                            <li>All profile information, farm surveys, machinery listings, uploaded photos, and push notification tokens are permanently purged within <strong>30 calendar days</strong>.</li>
+                            <li>Financial transaction records (GST invoices and payment transaction summaries) are retained strictly as required by Indian taxation and audit compliance statutes.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </section>
 
         </div>
-
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2026 <strong>Crafzio / Agrivaan</strong>. All Rights Reserved.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.82rem; color: var(--text-muted);">
-            Farmer App Package: <code>com.agrivaan.crafzio.farmer.app</code> | Owner App Package: <code>com.agrivaan.crafzio.owner.app</code>
-        </p>
+        <div class="footer-content">
+            <p>&copy; 2026 <strong>Crafzio Technologies Pvt. Ltd. / Agrivaan</strong>. All Rights Reserved.</p>
+            <p>
+                Farmer App Package: <code>com.agrivaan.crafzio.farmer.app</code> &bull; Owner App Package: <code>com.agrivaan.crafzio.owner.app</code>
+            </p>
+            <p style="margin-top: 0.75rem;">
+                Official Support: <a href="mailto:team@crafzio.in">team@crafzio.in</a> | <a href="mailto:support@agrivaan.com">support@agrivaan.com</a>
+            </p>
+        </div>
     </footer>
 
+    <!-- Tab Switching & Deep Linking Script -->
     <script>
-        function scrollToSection(id) {
-            const tabs = document.querySelectorAll('.app-tab');
-            tabs.forEach(tab => tab.classList.remove('active'));
-            if (event && event.target) {
-                event.target.classList.add('active');
+        function switchDocument(docKey) {
+            // Update Tab states
+            document.querySelectorAll('.doc-tab').forEach(tab => tab.classList.remove('active'));
+            const activeTab = document.getElementById('tab-' + docKey);
+            if (activeTab) activeTab.classList.add('active');
+
+            // Update Views
+            document.querySelectorAll('.section-view').forEach(view => view.classList.remove('active'));
+            const activeView = document.getElementById('view-' + docKey);
+            if (activeView) activeView.classList.add('active');
+
+            // Update Header dynamic text
+            const title = document.getElementById('hero-title');
+            const subtitle = document.getElementById('hero-subtitle');
+
+            if (docKey === 'privacy') {
+                title.textContent = 'Privacy Policy';
+                subtitle.textContent = 'Official Privacy Policy & User Data Protection Standards for Agrivaan Mobile Applications';
+                history.replaceState(null, null, '#privacy');
+            } else if (docKey === 'terms') {
+                title.textContent = 'Terms & Conditions';
+                subtitle.textContent = 'Official Farmer & Equipment Owner Service Agreement (Crafzio Technologies Pvt. Ltd.)';
+                history.replaceState(null, null, '#terms');
+            } else if (docKey === 'deletion') {
+                title.textContent = 'Account & Data Deletion';
+                subtitle.textContent = 'Google Play Policy Compliant In-App & Email Account Deletion Instructions';
+                history.replaceState(null, null, '#deletion');
             }
 
-            if (id === 'all') {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            } else {
-                const element = document.getElementById(id);
-                if (element) {
-                    element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }
+            // Smooth scroll to top of card
+            const container = document.querySelector('.card');
+            if (container) {
+                const navHeight = 90;
+                const elementPosition = container.getBoundingClientRect().top + window.pageYOffset;
+                window.scrollTo({
+                    top: elementPosition - navHeight,
+                    behavior: 'smooth'
+                });
             }
         }
+
+        // Handle URL Hash on load (#terms, #privacy, #deletion)
+        window.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.toLowerCase();
+            if (hash === '#terms' || hash.startsWith('#term-')) {
+                switchDocument('terms');
+                if (hash.startsWith('#term-')) {
+                    setTimeout(() => {
+                        const target = document.querySelector(hash);
+                        if (target) target.scrollIntoView({ behavior: 'smooth' });
+                    }, 200);
+                }
+            } else if (hash === '#deletion' || hash === '#acdelete' || hash === '#delete') {
+                switchDocument('deletion');
+            } else {
+                switchDocument('privacy');
+            }
+        });
     </script>
 </body>
 </html>
