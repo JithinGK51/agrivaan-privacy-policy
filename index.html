@@ -978,8 +978,11 @@
                     </div>
 
                     <div class="permission-card">
-                        <h4>🔔 Notification Permissions (POST_NOTIFICATIONS)</h4>
-                        <p><strong>Rationale:</strong> Delivers instant alerts for booking requests, driver dispatch updates, work timer OTPs, and payment receipts via Firebase Cloud Messaging (FCM).</p>
+                        <h4>🔔 Notification Permissions &amp; In-App Campaign Management (POST_NOTIFICATIONS)</h4>
+                        <p><strong>Rationale &amp; Agricultural Necessity:</strong> Delivers time-critical push alerts for equipment booking confirmations, operator dispatch ETAs, hourly work timer OTPs, shop fertilizer delivery tracking, and emergency weather notices via Firebase Cloud Messaging (FCM).</p>
+                        <p style="margin-top: 8px; font-size: 0.9em; color: #475569;">
+                            <strong>Permission Tracking &amp; Compliance Guarantees:</strong> To avoid attempting undeliverable push transmissions, our system verifies whether notifications are permitted at the operating system level (categorized as <em>Granted</em>, <em>Denied</em>, or <em>Blocked</em>). For users with disabled notifications, our app may periodically display a non-intrusive in-app prompt explaining the importance of dispatch alerts with a direct option to navigate to your device settings. We strictly comply with Google Play Store and Apple Developer Guidelines: we never attempt to bypass operating system controls, silently trigger notifications, or spam users. You retain full control to enable or disable notification permissions at any time via your device settings.
+                        </p>
                     </div>
 
                     <div class="permission-card">
