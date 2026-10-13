@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agrivaan - Privacy Policy & Terms of Service</title>
     <meta name="description" content="Official Privacy Policy, Terms & Conditions, and User Data Deletion Instructions for Agrivaan Farmer App and Agrivaan Owner App developed by Crafzio. Fully compliant with Google Play Store Policies.">
+    <!-- AgriVaan Official Brand Favicon & Meta Icons -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -805,14 +808,22 @@
     <!-- Header / Hero Section -->
     <header class="header">
         <div class="header-content">
+            <div style="margin-bottom: 1rem;">
+                <img src="assets/images/logo.png" alt="AgriVaan" style="height: 72px; width: auto; object-fit: contain; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.25));" onerror="this.onerror=null; this.src='favicon.png';">
+            </div>
             <div class="badge-bar">
                 <span class="badge">🛡️ Google Play Policy Compliant</span>
                 <span class="badge">🔒 GDPR & DPDP Ready</span>
                 <span class="badge">⚖️ IT Act 2000 Compliant</span>
+                <span class="badge">🚀 Release v1.0</span>
             </div>
             <h1 id="hero-title">Privacy Policy & Terms of Service</h1>
             <p id="hero-subtitle">Official Legal Agreements, User Data Protection Policies &amp; In-App Account Deletion Procedures for Agrivaan Mobile Applications</p>
             <div class="meta-info">
+                <div class="meta-chip">
+                    <span>🏷️</span>
+                    <span><strong>Version:</strong> v1.0 (Production Release)</span>
+                </div>
                 <div class="meta-chip">
                     <span>📅</span>
                     <span><strong>Effective Date:</strong> September 23, 2026</span>
@@ -995,6 +1006,11 @@
                         <p><strong>Rationale:</strong> Updates real-time booking status on your phone's home screen widget without requiring continuous app launches.</p>
                     </div>
 
+                    <div class="permission-card">
+                        <h4>🔄 Google Play In-App Update Management (Official Play Core API)</h4>
+                        <p><strong>Rationale &amp; Security:</strong> To guarantee uninterrupted service and protect farmers from security vulnerabilities, our mobile applications integrate Google Play's official In-App Update API (Play Core). When an update is detected, the app facilitates official Google Play installations via Flexible updates (background download with install prompt) or Immediate updates (critical full-screen upgrades for older builds below minimum supported versions). All update downloads are cryptographically verified and served exclusively by the Google Play Store; we never download APKs or binary files from unverified third-party hosts or sideloading mechanisms.</p>
+                    </div>
+
                     <div class="permission-card removed">
                         <h4>🛡️ Explicitly Removed Permissions (Privacy &amp; Battery Protection)</h4>
                         <p><strong>Status:</strong> Permissions such as <code>FOREGROUND_SERVICE</code> and <code>USE_FULL_SCREEN_INTENT</code> have been explicitly removed (via manifest rules) to eliminate intrusive background operations and optimize device battery life.</p>
@@ -1011,6 +1027,7 @@
                 <p>We do not sell, rent, or commercialize your personal data. We partner strictly with certified infrastructure and payment service providers:</p>
                 
                 <ul>
+                    <li><strong>Google Play Services &amp; Play Core:</strong> Facilitates verified Google Play In-App Updates, licensing, and track synchronization. (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>)</li>
                     <li><strong>Google Maps Platform:</strong> Provides mapping, reverse geocoding, and field distance calculations. (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>)</li>
                     <li><strong>Google Firebase (FCM &amp; Crashlytics):</strong> Delivers encrypted push notifications and captures anonymous performance logs. (<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Terms</a>)</li>
                     <li><strong>Razorpay Payment Gateway:</strong> Compliant with RBI and PCI-DSS Level 1 standards for processing UPI, card, and net-banking transactions. (<a href="https://razorpay.com/privacy/" target="_blank" rel="noopener">Razorpay Privacy Policy</a>)</li>
